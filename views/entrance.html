@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="he">
+<head>
+  <meta charset="UTF-8">
+  <title> MyStuff </title> <!--name of the website-->
+  <link rel="stylesheet" href="../static/css/styles.css">
+  <link rel="icon" href="../static/img/title_logo.png" type="image/icon type">
+  <script src="../static/js/objects_dictionary.js" defer></script>
+  <script src="../static/js/static_functions.js" defer></script>
+  <script src="../static/js/entrance.js" defer></script>
+</head>
+<body>
+<div class="grid-container">
+  <header>
+    <div class="grid-logo">
+    <img src="../static/img/pazel.png" alt="MyStuff logo" id="logo">
+  </div>
+  </header>
+  <div id="grid-index-guitar">
+    <img src="../static/img/guitar.png" alt="guitar">
+  </div>
+  <div id="grid-index-bag">
+    <img src="../static/img/bag.png" alt="bag">
+  </div>
+  <div id="grid-index-form">
+    <form id="login-user" name="login-user" action="personal_area.html" method="get">
+      <div class="msg"></div>
+      <div dir="ltr">
+        <label dir="rtl">דואר אלקטרוני*:
+          <input dir="rtl" type="email" name="email" class="text_input" id="userEmail">
+        </label>
+      </div>
+      <div dir="ltr">
+        <label dir="rtl">סיסמה*:
+          <input dir="rtl" type="password" name="password" class="text_input" id="userPassword">
+        </label>
+      </div>
+      <div dir="ltr">
+        <input class="red_button" type="submit" name="submit" value="התחברות">
+        <a href="create_new_account.html" class="yellow_button"> הרשמה</a>
+      </div>
+    </form>
+  </div>
+  <div id="grid-index-bicycle">
+    <img src="../static/img/bicycle.png" alt="bicycle">
+  </div>
+</div>
+<div id="grid-index-writing">
+    <img src="../static/img/ktiva.png" alt="writing">
+  </div>
+<footer>
+    Your Stuff Are Already Much More Organized
+</footer>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="he">
+<head>
+  <meta charset="UTF-8">
+  <title>MyStuff</title>
+  <link rel="stylesheet" href="../static/css/styles.css">
+  <link rel="icon" href="../static/img/title_logo.png" type="image/icon type">
+  <script src="../static/js/objects_dictionary.js"></script>
+  <script src="../static/js/static_functions.js" defer></script>
+  <script src="../static/js/choose_space.js" defer></script>
+</head>
+<body>
+<div id="join-space-window">
+  <div id="exit_join-space-window" class="exit_btn"><img src="../static/img/x.png" alt="exit"></div>
+  <div class="crud-title" id="join-space-title">
+    הצטרפות לחלל קיים
+  </div>
+  <form name="join-space-form" id="join-space-form" dir="rtl" action="" method="post">
+    <div id="enter-space-id-label">
+    <label id="insertSpaceName" dir="rtl" class="regular-text" for="input_space_id">מהו המזהה של החלל?</label>
+  </div>
+    <div>
+    <input dir="ltr" type="text" name="space_id" id="input_space_id" placeholder="יש להזין את המזהה המלא">
+  </div>
+    <div>
+      <input type="submit" name="submit" value="שיגור בקשת הצטרפות" class="red_button" id="sendRequest">
+    </div>
+  </form>
+
+
+
+</div>
+<div class="crud-item-window" id="create-space-window">
+  <div class="exit_btn"><img src="../static/img/x.png" alt="exit" id="exit_create-space-window"></div>
+  <div class="space_attributes">
+    <div class="crud-title">יצירת חלל</div>
+    <form name="create-space-form" id="create-space-form" dir="rtl" action="" method="post">
+      <div class="msg" id="createSpaceMessage"></div>
+      <div>
+        <label>שם*:
+          <input type="text" name="name" class="text_input" id="newSpaceName">
+        </label>
+      </div>
+<!--      <div>-->
+<!--        <label dir="rtl">צירוף תמונה:</label>-->
+<!--        <img class="upload_image" src="../static/img/plus.png" alt="plus">-->
+<!--      </div>-->
+      <div class="chooser" id="chooseSpacePrivacy">
+        <div>
+          <label>
+            <input type="radio" checked="checked" name="private" id="isPrivateSpace">
+          </label>פרטי
+        </div>
+        <div>
+          <label>
+            <input type="radio" checked="checked" name="private">
+          </label>לא פרטי
+        </div>
+      </div>
+      <div dir="ltr">
+        <input type="submit" name="submit" value="שמירה" class="red_button" id="submit-create-space">
+      </div>
+    </form>
+  </div>
+</div>
+<div dir="rtl" class="grid-container" id="add-space">
+  <div class="back" dir="rtl" >
+    <a id="back-link">
+      <img src="../static/img/back.png" alt="back">
+    </a>
+  </div>
+  <div id="join-space">
+    הצטרפות לחלל קיים
+    <img src="../static/img/connection.png" alt="join">
+  </div>
+  <div id="create-new-space">
+    <div>
+      יצירת חלל חדש
+    </div>
+    <img src="../static/img/big_plus.png" alt="join" class="bigger">
+  </div>
+</div>
+</body>
+</html>

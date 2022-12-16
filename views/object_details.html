@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="he">
+<head>
+  <meta charset="UTF-8">
+  <title> MyStuff </title> <!--name of the website-->
+  <link rel="stylesheet" href="../static/css/styles.css">
+  <link rel="icon" href="../static/img/title_logo.png" type="image/icon type">
+  <script src="../static/js/objects_dictionary.js" defer></script>
+  <script src="../static/js/static_functions.js" defer></script>
+  <script src="../static/js/object_details.js" defer></script>
+</head>
+<body>
+<div class="crud-item-window" id="edit-item-window" dir="rtl">
+  <div class="exit_btn"><img src="../static/img/x.png" alt="exit" id="exit_edit-item-form"></div>
+  <div class="item_attributes">
+    <div class="crud-title" id="edit-object">עריכת פריט</div>
+    <form name="create-item-form" id="createItemForm" dir="rtl" action="" method="post">
+      <div>
+        <label dir="rtl"> שם:
+          <input dir="rtl" type="text" name="name" class="text_input">
+        </label>
+      </div>
+<!--      <div>-->
+<!--        <label dir="rtl">צירוף תמונה:</label>-->
+<!--        <img class="upload_image" src="../static/img/plus.png" alt="plus">-->
+<!--      </div>-->
+<!--      <div>-->
+<!--        <div id="remove_object_pic" class="red_button">הסרת תמונה</div>-->
+<!--      </div>-->
+      <div class="chooser">
+        <div>
+          <label>
+            <input type="radio" checked="checked" name="private">
+          </label>פרטי
+        </div>
+        <div>
+          <label>
+            <input type="radio" checked="checked" name="private">
+          </label>לא פרטי
+        </div>
+      </div>
+      <div class="chooser">
+        <div>
+          <label>
+            <input type="radio" checked="checked" name="atomic" id="atomic">
+          </label>אטומי
+        </div>
+        <div>
+          <label>
+            <input type="radio" checked="checked" name="atomic" id="non-atomic">
+          </label>תכולתי
+        </div>
+      </div>
+      <div>
+        <label>
+          <span class="custom-select" id="select-stock-status">
+            <input type="checkbox" checked="checked" name="is_stock" id="is-stock">
+            פריט מלאי
+            <select id="status-options">
+              <option>במלאי</option>
+              <option>הולך להיגמר</option>
+              <option>אזל מהמלאי</option>
+            </select>
+          </span>
+        </label>
+        <span class="custom-select">
+          <label>מיקום
+            <select>
+              <option>מדף עליון</option>
+              <option>מגירת שולחן</option>
+              <option>על השולחן</option>
+            </select>
+          </label>
+        </span>
+      </div>
+      <div dir="ltr">
+        <input type="submit" name="submit" value="שמירה" class="red_button">
+      </div>
+      <div id="delete-item">
+        <img src="../static/img/trash.png" alt="delete">
+      </div>
+    </form>
+  </div>
+</div>
+<div class="grid-container">
+  <div dir="rtl" id="object-details-zone">
+    <div class="back" dir="rtl">
+      <a id="back-link">
+        <img src="../static/img/back.png" alt="back">
+      </a>
+    </div>
+    <div class="object-placer">
+      <div class="object-title"> מחקים </div>
+      <div class="concatenation">
+        <a href="non_atomic_zone.html" class="object-label">חדר לימודים</a>
+        <div class="arrow"><img src="../static/img/arrow.png" alt="contains"></div>
+        <a href="non_atomic_zone.html" class="object-label">מדפים גדולים</a>
+        <div class="arrow"><img src="../static/img/arrow.png" alt="contains"></div>
+        <a href="non_atomic_zone.html" class="object-label">מדף עליון</a>
+        <div class="arrow"><img src="../static/img/arrow.png" alt="contains"></div>
+        <div class="object-label">מחקים</div>
+      </div>
+    </div>
+    <div dir="ltr" class="object-details-container">
+      <div class="buttons-line">
+        <div class="edit_object_btn" id="edit-item">עריכה</div>
+        <div class="stock-status"> במלאי</div>
+      </div>
+<!--      <div class="object-pic">-->
+<!--        -->
+<!--      </div>-->
+    </div>
+  </div>
+</div>
+<footer>
+    Your Stuff Are Already Much More Organized
+</footer>
+</body>
+</html>
