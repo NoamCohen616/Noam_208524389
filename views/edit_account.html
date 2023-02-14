@@ -3,63 +3,62 @@
 <head>
   <meta charset="UTF-8">
   <title>MyStuff</title>
-  <link rel="stylesheet" href="../static/css/styles.css">
-  <link rel="icon" href="../static/img/title_logo.png" type="image/icon type">
-  <script src="../static/js/objects_dictionary.js" defer></script>
-  <script src="../static/js/static_functions.js" defer></script>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" href="img/title_logo.png" type="image/icon type">
+  <script src="../static/js/common.js" defer></script>
   <script src="../static/js/edit_account.js" defer></script>
 </head>
-<body>
+<body dir="rtl">
 <div class="grid-container">
   <div class="grid-logo">
-    <img src="../static/img/pazel.png" alt="MyStuff logo" id="logo">
+    <img src="img/pazel.png" alt="MyStuff logo" id="logo">
   </div>
   <div class="grid-account-title">
     <label class="title"> עריכת חשבון </label>
   </div>
-  <div class="back" dir="rtl" >
+  <div class="back" >
     <a id="back-link">
-      <img src="../static/img/back.png" alt="back">
+      <img src="img/back.png" alt="back">
     </a>
   </div>
   <div class="grid-account-creator">
-    <img src="../static/img/creator.png" alt="creator">
+    <img src="img/creator.png" alt="creator">
   </div>
   <div class="grid-account-form">
-    <form action="" method="post" id="editAccountForm">
+    <form id="editAccountForm">
       <div class="msg"></div>
       <div>
-        <label dir="rtl">שם:
-          <input dir="rtl" type="text" name="name" class="text_input" id="userName">
+        <label>שם:
+          <input type="text" name="name" class="text_input" id="userName">
         </label>
       </div>
       <div>
-        <label dir="rtl">סיסמה:
-          <input dir="rtl" type="password" name="password" class="text_input" id="newPassword">
+        <label>סיסמה:
+          <input type="password" name="password" class="text_input" id="newPassword">
         </label>
       </div>
       <div>
-        <label dir="rtl">אימות סיסמה:
-          <input dir="rtl" type="password" name="password" class="text_input" id="verifyPassword">
+        <label>אימות סיסמה:
+          <input type="password" name="password" class="text_input" id="verifyPassword">
         </label>
       </div>
 <!--      <div>-->
-<!--        <label dir="rtl">תמונה:</label>-->
+<!--        <label>תמונה:</label>-->
 <!--        <span class="upload_image">-->
-<!--          <img src="../static/img/plus.png" alt="plus">-->
+<!--          <img src="img/plus.png" alt="plus">-->
 <!--        </span>-->
 <!--      </div>-->
 <!--      <div>-->
 <!--        <button class="red_button" id="remove_account_pic">הסרת תמונה</button>-->
 <!--      </div>-->
-      <div id="save-changes_btn" dir="ltr">
+      <div id="save-changes_btn">
         <input type="submit" name="submit" value="שמירה" class="red_button">
         <button id="cancel_btn" class="blue_button2"> ביטול</button>
       </div>
     </form>
   </div>
   <div class="grid-account-create">
-    <img src="../static/img/create.png" alt="create">
+    <img src="img/create.png" alt="create">
   </div>
 </div>
 <footer>

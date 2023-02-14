@@ -9,8 +9,6 @@ const joinSpaceWindowStyle = document.getElementById("join-space-window").style;
 const addSpaceStyle = document.getElementById("add-space").style;
 const createSpaceWindowStyle = document.getElementById("create-space-window").style;
 const joinSpaceInput = document.getElementById("input_space_id");
-const activeUser = JSON.parse((window.localStorage['activeUser']));
-
 
 document.getElementById("join-space").onclick = () => {
   makeVisible(joinSpaceWindowStyle);
@@ -40,9 +38,8 @@ document.getElementById('sendRequest').onclick = () => {
 
 const createSpaceForm = document.querySelector('#create-space-form');
 const spaceName = document.querySelector('#newSpaceName');
-//const isPrivateSpace = document.querySelector('#isPrivateSpace');
+const isPrivateSpace = document.querySelector('#isPrivateSpace');
 const msg = document.querySelector('.msg');
-const activeObjectsList = JSON.parse((window.localStorage['activeObjectsList']));
 
 
 const validSpaceCreation = (e) => {
@@ -68,9 +65,7 @@ const validSpaceCreation = (e) => {
       msg.innerHTML='';
       msg.classList.remove('success');
     }, 4000);
-    /*createNewSpace(spaceName, isPrivateSpace.checked);*/
-    location.href = "personal_area.html";
-    alert("החלל נוצר בהצלחה!");
+    createNewSpace(spaceName.value, isPrivateSpace.checked);
   }
 }
 createSpaceForm.addEventListener('submit', validSpaceCreation);

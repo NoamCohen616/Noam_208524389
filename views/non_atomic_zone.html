@@ -3,30 +3,22 @@
 <head>
   <meta charset="UTF-8">
   <title> MyStuff </title> <!--name of the website-->
-  <link rel="stylesheet" href="../static/css/styles.css">
-  <link rel="icon" href="../static/img/title_logo.png" type="image/icon type">
-  <script src="../static/js/objects_dictionary.js" defer></script>
-  <script src="../static/js/static_functions.js" defer></script>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" href="img/title_logo.png" type="image/icon type">
+  <script src="../static/js/common.js" defer></script>
   <script src="../static/js/non_atomic_zone.js" defer></script>
 </head>
-<body>
-<div class="crud-item-window" id="edit-item-window" dir="rtl">
-  <div class="exit_btn"><img src="../static/img/x.png" alt="exit" id="exit_edit-item-form"></div>
+<body dir="rtl">
+<div class="crud-item-window" id="edit-item-window">
+  <div class="exit_btn"><img src="img/x.png" alt="exit" id="exit_edit-item-form"></div>
   <div class="item_attributes">
     <div class="crud-title" id="edit-object">עריכת פריט</div>
-    <form name="create-item-form" id="createItemForm" dir="rtl" action="" method="post">
+    <form name="create-item-form" id="createItemForm" action="" method="post">
       <div>
-        <label dir="rtl"> שם:
-          <input dir="rtl" type="text" name="name" class="text_input">
+        <label> שם:
+          <input type="text" name="name" class="text_input">
         </label>
       </div>
-<!--      <div>-->
-<!--        <label dir="rtl">צירוף תמונה:</label>-->
-<!--        <img class="upload_image" src="../static/img/plus.png" alt="plus">-->
-<!--      </div>-->
-<!--      <div >-->
-<!--        <div id="remove_object_pic" class="red_button">הסרת תמונה</div>-->
-<!--      </div>-->
       <div class="chooser">
         <div>
           <label>
@@ -54,12 +46,12 @@
       <div>
         <label>
           <span class="custom-select" id="select-stock-status">
-            <input type="checkbox" checked="checked" name="is_stock" id="is-stock">
+            <input type="checkbox" name="is_stock" id="is-stock">
             פריט מלאי
             <select id="status-options">
-              <option>במלאי</option>
-              <option>הולך להיגמר</option>
-              <option>אזל מהמלאי</option>
+              <option value="במלאי">במלאי</option>
+              <option value="הולך להיגמר">הולך להיגמר</option>
+              <option value="אזל מהמלאי">אזל מהמלאי</option>
             </select>
           </span>
         </label>
@@ -70,11 +62,11 @@
           </label>
         </span>
       </div>
-      <div dir="ltr">
+      <div>
         <input type="submit" name="submit" value="שמירה" class="red_button">
       </div>
       <div id="delete-item">
-        <img src="../static/img/trash.png" alt="delete">
+        <img src="img/trash.png" alt="delete">
       </div>
     </form>
   </div>
@@ -82,19 +74,19 @@
 <div class="grid-container">
   <div id="non-atomic-zone">
     <div id="details_btn">
-      <a href="object_details.html" class="red_button"> פרטים</a>
+      <a href="/object_details" class="red_button"> פרטים</a>
     </div>
-    <div class="back" dir="rtl">
+    <div class="back">
       <a id="back-link">
-        <img src="../static/img/back.png" alt="back">
+        <img src="img/back.png" alt="back">
       </a>
     </div>
     <div class="buttons-line">
       <div id="edit-item" class="edit_object_btn">עריכה</div>
-      <div dir="rtl" id="object_id">מזהה:</div>
+      <div id="object_id">מזהה:</div>
     </div>
-    <div dir="rtl" class="object-title" id="non-atomic-title"></div>
-    <div class="objects_container" dir="rtl" id="objects-placer-non-atomic">
+    <div class="object-title" id="non-atomic-title"></div>
+    <div class="objects_container" id="objects-placer-non-atomic">
     </div>
   </div>
 </div>

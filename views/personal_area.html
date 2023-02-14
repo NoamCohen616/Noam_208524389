@@ -3,40 +3,30 @@
 <head>
   <meta charset="UTF-8">
   <title> MyStuff </title> <!--name of the website-->
-  <link rel="stylesheet" href="../static/css/styles.css">
-  <link rel="icon" href="../static/img/title_logo.png" type="image/icon type">
-  <script src="../static/js/objects_dictionary.js" defer></script>
-  <script src="../static/js/static_functions.js" defer></script>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" href="img/title_logo.png" type="image/icon type">
+  <script src="../static/js/common.js" defer></script>
   <script src="../static/js/personal_area.js" defer></script>
 </head>
-<body>
-<div dir="rtl" id="alerts_center">
-  <div dir="ltr" id="alert_center_content">
-    <div class="exit_btn" id="exit_alerts_center"><img src="../static/img/x.png" alt="exit"></div>
-    <span class="alert">בקשת הצטרפות חדשה </span>
-    <span class="alert">הודעה על עדכון סטטוס של פריט </span>
-    <span class="alert">הרבה זמן לא ביקרת כאן!</span>
-    <span class="alert">הודעה על עדכון סטטוס של פריט </span>
+<body dir="rtl">
+<div id="alerts_center">
+  <div id="alert_center_content">
+    <div class="exit_btn" id="exit_alerts_center"><img src="img/x.png" alt="exit"></div>
   </div>
 </div>
-<div class="crud-item-window" id="create-item-window" dir="rtl">
-  <div class="exit_btn"><img src="../static/img/x.png" alt="exit" id="exit_create-item-form"></div>
+
+<div class="crud-item-window" id="create-item-window">
+  <div class="exit_btn"><img src="img/x.png" alt="exit" id="exit_create-item-form"></div>
   <div class="item_attributes">
     <div class="crud-title">יצירת פריט</div>
-    <form name="create-item-form" id="createItemForm" action="" dir="rtl" method="post">
+    <form name="create-item-form" id="createItemForm" action="" method="post">
       <div class="msg" id="createMessage"></div>
       <div>
-        <label dir="rtl"> שם*:
-          <input dir="rtl" type="text" name="name" class="text_input" id="newItemName">
+        <label> שם*:
+          <input type="text" name="name" class="text_input" id="newItemName">
         </label>
       </div>
-<!--      <div>-->
-<!--        <label dir="rtl">צירוף תמונה:</label>-->
-<!--        <img class="upload_image" src="../static/img/plus.png" alt="plus">-->
-<!--      </div>-->
-<!--      <div>-->
-<!--        <div id="remove_object_pic" class="red_button">הסרת תמונה</div>-->
-<!--      </div>-->
+
       <div class="chooser">
         <div>
           <label>
@@ -64,12 +54,12 @@
       <div>
         <label>
           <span class="custom-select" id="select-stock-status">
-            <input type="checkbox" checked="checked" name="is_stock" id="is-stock">
+            <input type="checkbox" name="is_stock" id="is-stock">
             פריט מלאי
             <select id="status-options">
-              <option>במלאי</option>
-              <option>הולך להיגמר</option>
-              <option>אזל מהמלאי</option>
+              <option value="במלאי">במלאי</option>
+              <option value="הולך להיגמר">הולך להיגמר</option>
+              <option value="אזל מהמלאי">אזל מהמלאי</option>
             </select>
           </span>
         </label>
@@ -80,7 +70,7 @@
           </label>
         </span>
       </div>
-      <div dir="ltr">
+      <div>
         <input type="submit" name="submit" value="שמירה" class="red_button">
       </div>
     </form>
@@ -88,43 +78,43 @@
 </div>
 <div id="grid-personal-container">
     <div class="grid-logo">
-    <img src="../static/img/pazel.png" alt="MyStuff logo" id="logo">
+    <img src="img/pazel.png" alt="MyStuff logo" id="logo">
   </div>
-  <div id="grid-personal-title" dir="rtl">
+  <div id="grid-personal-title">
     <label class="title"> אזור אישי </label>
     <br>
     <label id="spaces-title"> החללים שלי </label>
   </div>
-  <div id="alerts" dir="rtl">
+  <div id="alerts">
     <div id="bell" class="pulsing">
-      <img src="../static/img/bell.png" alt="bell">
-      <img src="../static/img/bell_hover.png" class="img-top" alt="bell Front">
+      <img src="img/bell.png" alt="bell">
+      <img src="img/bell_hover.png" class="img-top" alt="bell Front">
     </div>
-    <label dir="rtl" class="regular-text" id="hello-user"> </label>
+    <label class="regular-text" id="hello-user"> </label>
   </div>
-  <div dir="rtl" id="supply_button">
-    <a href="supply_manage.html" class="pink_button"> ניהול מלאי</a>
+  <div id="supply_button">
+    <a href="/supply_manage" class="pink_button"> ניהול מלאי</a>
   </div>
-  <div class="objects_container" id="objects-placer" dir="rtl">
-    <a href="choose_space.html" id="new_space">הוספת חלל
-      <img class="plus" src="../static/img/plus.png" alt="add image">
+  <div class="objects_container" id="objects-placer">
+    <a href="/choose_space" id="new_space">הוספת חלל
+      <img class="plus" src="img/plus.png" alt="add image">
     </a>
   </div>
-  <div id="edit_button" dir="rtl">
-    <a href="edit_account.html" class="blue_button"> עריכת חשבון</a>
+  <div id="edit_button">
+    <a href="/edit_account" class="blue_button"> עריכת חשבון</a>
   </div>
-  <div id="add_item_button" dir="rtl">
+  <div id="add_item_button">
     <span class="red_button2"> הוספת פריט חדש +</span>
   </div>
   <form id="searchItemForm" action="" method="get">
-    <div dir="rtl">
+    <div>
       <div class="msg" id="searchMessage"></div>
       <div>
         <div class="msg"></div>
         <label>חיפוש פריט קיים:
-          <input dir="rtl" type="text" name="search" id="itemSearched" placeholder="יש להזין את שם הפריט כאן">
+          <input type="text" name="search" id="itemSearched" placeholder="יש להזין את שם הפריט כאן">
         </label>
-        <div dir="ltr">
+        <div>
           <input class="red_button" type="submit" name="submit" value="חיפוש" id="searchInput">
         </div>
         <div id="searchResults">
@@ -132,8 +122,8 @@
       </div>
     </div>
   </form>
-  <div id="logout_button" dir="rtl">
-    <a href="entrance.html" class="yellow_button2"> התנתקות</a>
+  <div id="logout_button">
+    <a href="/home" class="yellow_button2"> התנתקות</a>
   </div>
 </div>
 <footer>

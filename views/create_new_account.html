@@ -5,11 +5,10 @@
   <title>MyStuff</title>
   <link rel="stylesheet" href="../static/css/styles.css">
   <link rel="icon" href="../static/img/title_logo.png" type="image/icon type">
-  <script src="../static/js/objects_dictionary.js"></script>
-  <script src="../static/js/static_functions.js" defer></script>
+  <script src="../static/js/common.js" defer></script>
   <script src="../static/js/create_new_account.js" defer></script>
 </head>
-<body>
+<body dir="rtl">
 <div class="grid-container">
   <div class="grid-logo">
     <img src="../static/img/pazel.png" alt="MyStuff logo" id="logo">
@@ -17,7 +16,7 @@
   <div class="grid-account-title">
     <label class="title"> יצירת חשבון חדש </label>
   </div>
-  <div class="back" dir="rtl" >
+  <div class="back" >
     <a id="back-link">
       <img src="../static/img/back.png" alt="back">
     </a>
@@ -29,30 +28,30 @@
     <form id="signup-user" name="signup-user" action="personal_area.html" method="get">
       <div class="msg"></div>
       <div>
-        <label dir="rtl"> שם*:
-          <input dir="rtl" type="text" name="name" class="text_input" id="userName">
+        <label> שם*:
+          <input type="text" name="name" class="text_input" id="userName">
         </label>
       </div>
       <div>
-        <label dir="rtl"> דואר אלקטרוני*:
-          <input dir="rtl" type="email" name="email" class="text_input" id="newUserEmail">
+        <label> דואר אלקטרוני*:
+          <input type="email" name="email" class="text_input" id="newUserEmail">
         </label>
       </div>
       <div>
-        <label dir="rtl">סיסמה*:
-          <input dir="rtl" type="password" name="password" class="text_input" id="signUpPassword">
+        <label>סיסמה*:
+          <input type="password" name="password" class="text_input" id="signUpPassword">
         </label>
       </div>
       <div>
-        <label dir="rtl">אימות סיסמה*:
-          <input dir="rtl" type="password" name="password" class="text_input" id="signUpVerificationPassword">
+        <label>אימות סיסמה*:
+          <input type="password" name="password" class="text_input" id="signUpVerificationPassword">
         </label>
       </div>
 <!--      <div>-->
-<!--        <label dir="rtl">צירוף תמונה:</label>-->
+<!--        <label>צירוף תמונה:</label>-->
 <!--        <input type="image" class="upload_image" src="../static/img/plus.png" alt="add image">-->
 <!--      </div>-->
-      <div dir="ltr" id="submit-create-account">
+      <div id="submit-create-account">
         <input type="submit" name="submit" value="הרשמה" class="red_button">
       </div>
     </form>

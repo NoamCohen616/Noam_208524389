@@ -192,7 +192,6 @@ p{
   transition: 1s;
 }
 #logo{
-  float: left;
   width: 300px;
 }
 form{
@@ -481,6 +480,7 @@ form{
   margin: 1% 2% 2% 2%;
   text-align: center;
   line-height: 2.5em;
+  font-size: 18px;
 }
 .alert:hover{
   background-color: #CC3300;

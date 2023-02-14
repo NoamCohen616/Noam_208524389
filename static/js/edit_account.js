@@ -3,7 +3,6 @@ const name = document.querySelector('#userName');
 const password = document.querySelector('#newPassword');
 const verification = document.querySelector('#verifyPassword');
 const msg = document.querySelector('.msg');
-const activeUser = JSON.parse((window.localStorage['activeUser']));
 
 const validEditAccount = (e) => {
     e.preventDefault();

@@ -5,22 +5,21 @@
   <title>MyStuff</title>
   <link rel="stylesheet" href="../static/css/styles.css">
   <link rel="icon" href="../static/img/title_logo.png" type="image/icon type">
-  <script src="../static/js/objects_dictionary.js"></script>
-  <script src="../static/js/static_functions.js" defer></script>
+  <script src="../static/js/common.js" defer></script>
   <script src="../static/js/choose_space.js" defer></script>
 </head>
-<body>
+<body dir="rtl">
 <div id="join-space-window">
   <div id="exit_join-space-window" class="exit_btn"><img src="../static/img/x.png" alt="exit"></div>
   <div class="crud-title" id="join-space-title">
     הצטרפות לחלל קיים
   </div>
-  <form name="join-space-form" id="join-space-form" dir="rtl" action="" method="post">
+  <form name="join-space-form" id="join-space-form" action="" method="post">
     <div id="enter-space-id-label">
-    <label id="insertSpaceName" dir="rtl" class="regular-text" for="input_space_id">מהו המזהה של החלל?</label>
+    <label id="insertSpaceName" class="regular-text" for="input_space_id">מהו המזהה של החלל?</label>
   </div>
     <div>
-    <input dir="ltr" type="text" name="space_id" id="input_space_id" placeholder="יש להזין את המזהה המלא">
+    <input type="text" name="space_id" id="input_space_id" placeholder="יש להזין את המזהה המלא">
   </div>
     <div>
       <input type="submit" name="submit" value="שיגור בקשת הצטרפות" class="red_button" id="sendRequest">
@@ -34,7 +33,7 @@
   <div class="exit_btn"><img src="../static/img/x.png" alt="exit" id="exit_create-space-window"></div>
   <div class="space_attributes">
     <div class="crud-title">יצירת חלל</div>
-    <form name="create-space-form" id="create-space-form" dir="rtl" action="" method="post">
+    <form name="create-space-form" id="create-space-form" action="" method="post">
       <div class="msg" id="createSpaceMessage"></div>
       <div>
         <label>שם*:
@@ -42,7 +41,7 @@
         </label>
       </div>
 <!--      <div>-->
-<!--        <label dir="rtl">צירוף תמונה:</label>-->
+<!--        <label>צירוף תמונה:</label>-->
 <!--        <img class="upload_image" src="../static/img/plus.png" alt="plus">-->
 <!--      </div>-->
       <div class="chooser" id="chooseSpacePrivacy">
@@ -57,14 +56,14 @@
           </label>לא פרטי
         </div>
       </div>
-      <div dir="ltr">
+      <div>
         <input type="submit" name="submit" value="שמירה" class="red_button" id="submit-create-space">
       </div>
     </form>
   </div>
 </div>
-<div dir="rtl" class="grid-container" id="add-space">
-  <div class="back" dir="rtl" >
+<div class="grid-container" id="add-space">
+  <div class="back" >
     <a id="back-link">
       <img src="../static/img/back.png" alt="back">
     </a>

@@ -40,26 +40,26 @@ const validLogin = (e) => {
       msg.innerHTML='';
       msg.classList.remove('success');
     }, 4000);
-    location.href = "personal_area.html";
+
     user = currentUser(email.value);
     window.localStorage['activeUser'] = JSON.stringify(user);
+
     userSpacesList = getSharedSpaces(email.value);
     window.localStorage['activeUserSpacesList'] = JSON.stringify(userSpacesList);
+
     nonAtomicObjectsList = getUserNonAtomicObjects(email.value);
     window.localStorage['activeNonAtomicObjectsList'] = JSON.stringify(privacyFilter(user, nonAtomicObjectsList));
+
     objectsList = getAllSharedObjects(userSpacesList);
     window.localStorage['activeObjectsList'] = JSON.stringify((objectsList));
+
     atomicObjectsList = getAllAtomicDescendants(nonAtomicObjectsList);
     window.localStorage['activeAtomicObjectsList'] = JSON.stringify(privacyFilter(user, atomicObjectsList));
+
     stockObjectsList = getStockObjectsList(atomicObjectsList);
     window.localStorage['activeStockObjectsList'] = JSON.stringify(privacyFilter(user, stockObjectsList));
 
-
-
-
-
-
-
+    location.href = "/personal_area";
   }
 }
 loginForm.addEventListener('submit', validLogin);

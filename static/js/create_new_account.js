@@ -50,7 +50,6 @@ const validSignUp = (e) => {
             msg.classList.remove('success');
         }, 4000);
         createNewUser(email.value, password.value, name.value);
-        location.href = "personal_area.html";
     }
 }
 signUpForm.addEventListener('submit', validSignUp);
